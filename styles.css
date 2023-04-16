@@ -149,6 +149,7 @@ button{
     margin: 0;
 }
 
+
 .main__title--text:before{
     content: "";
     position:absolute;
@@ -167,9 +168,20 @@ button{
 .main__nav{
     display: flex;
     height: auto;
-    overflow:auto;
-    margin-top: 24px;
+    overflow:scroll;
+    padding-top: 24px;
+    padding-bottom: 0;
+    scroll-padding: 15px;
+    scrollbar-width:none;
 }
+.main__nav::-webkit-scrollbar{
+    display: none;
+}
+
+/* .main__nav::-moz-scrollbar{
+    scrollbar-width:0;
+} */
+
 .main__nav__button{
     display: inline-flex;
     justify-content: center;
@@ -234,7 +246,7 @@ button{
     width: 100vw;
 }
 
-@media (min-width:533px) {
+@media (min-width:767px) {
     .header__wrapper{
         padding-left: 24px;
         padding-right: 24px;
@@ -274,7 +286,9 @@ button{
         display: flex;
         justify-content: flex-start;
     }
-
+    .main__info{
+        width: 50%;
+    }
     .main__info--text{
         margin: 0;
         margin-right: 48px;
@@ -283,6 +297,7 @@ button{
         line-height: 20px;
         letter-spacing: 0.2px;
         color: #1B1C21;
+        
     }
 
     .main__logo__image{
@@ -311,6 +326,11 @@ button{
     }
     .title__button--hidden:first-child{
         margin-right: 25px;
+    }
+    .main__wrapper{
+        width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .main__nav{
         white-space:normal;
