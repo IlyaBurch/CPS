@@ -1,0 +1,24 @@
+var swiper = new Swiper(".brands__list--swiper", {
+    wrapperClass: 'swiper-wrapper',
+    SlideClass: 'brand__swiper-slide',
+    slidesPerView: 'auto',
+    loop:'true',
+    breakpoints: {
+        320:{
+            enabled: true
+        },
+        768:{
+            enabled: false
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: 'bullets',
+
+    },
+});
+
+document.querySelector('show-all').addEventListener('click', function() {
+    document.getElementById('show').classList.toggle("hidden");
+    document.getElementById('hide').classList.toggle("hidden");
+})
