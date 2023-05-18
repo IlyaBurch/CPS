@@ -152,6 +152,17 @@ a{
     padding-top: 16px;
 }
 
+.email, .number{
+    color: #1B1C21;
+    tr
+
+}
+
+.email:hover, .number:hover{
+    color: #ff3e79;
+    transition: color 200ms ease-out;
+}
+
 .navigation-number{
     font-family: TTlakes-Bold;
     font-size: 24px;
