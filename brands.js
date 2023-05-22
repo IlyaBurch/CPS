@@ -14,6 +14,7 @@ var swiper = new Swiper(".brands__list--swiper", {
     pagination: {
         el: ".swiper-pagination",
         type: 'bullets',
+        clickable: true
 
     },
 });

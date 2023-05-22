@@ -152,6 +152,13 @@ body{
     margin-top: 16px;
 }
 
+.swiper-pagination-bullet{
+    background-color: #DDDDDD;
+    ;
+}
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC !important;
+}
 @media (min-width: 768px) {
     .hidden{
         display: block;
