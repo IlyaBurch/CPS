@@ -14,7 +14,7 @@
             <span class="brands__title-text">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</span>
         </div>
         <div class="swiper brands__list--swiper">
-            <div id="list" class="swiper-wrapper brands__list">
+            <div id="list" class="swiper-wrapper brands__list brands--hidden">
                 <div class="brand brand__swiper swiper-slide">
                     <img src="images/Bitmap (1).png" alt="samsung" class="brand-logo brand__samsung--swiper brands-list__logo">
                     <button class="hollow-button brand__hollow-button"></button>
@@ -64,34 +64,12 @@
             <div class="swiper-pagination"></div>
         </div>
         <button class="show-all show-all__brands hidden">
-            <span id="show" class="show-all__text show-all__text--active rotate-show">Показать все</span>
-            <span id="hide" class="show-all__text">Скрыть</span>
+            <span class="show-all__text rotate-show">Показать все</span>
         </button>
     </article>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="brands/brands.js"></script>
-  <!-- Initialize Swiper -->
-    <!-- <script>
-        var swiper = new Swiper(".brands__list--swiper", {
-            wrapperClass: 'swiper-wrapper',
-            SlideClass: 'brand__swiper-slide',
-            slidesPerView: 'auto',
-            loop:'true',
-            breakpoints: {
-                320:{
-                    enabled: true
-                },
-                768:{
-                    enabled: false
-                }
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: 'bullets',
 
-            },
-        });
-  </script> -->
   
 </body>
 </html>

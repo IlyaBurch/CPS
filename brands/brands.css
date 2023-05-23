@@ -9,6 +9,12 @@ html {
 body{
     height: 100%;
 }
+
+@keyframes showAllAnimation {
+    to {
+        width: 160px;
+    }
+}
 .brands{
     background-color: #F8F8F8;
     width: 100%;
@@ -26,7 +32,7 @@ body{
 
 .brands-list__swiper{
     width: 100%;
-    overflow: hidden;   
+    overflow: hidden;  
 
 }
 
@@ -45,7 +51,7 @@ body{
     min-height: 0;
     position: relative;
     padding-left: 16px;
-    transition: 300ms ease-in;
+    transition:300ms ease-in;
 }
 
 .brands__list--swiper::after{
@@ -58,6 +64,8 @@ body{
     right: 0px;
     z-index: 15;
 }
+
+
 
 .brand{
     width: 240px;
@@ -184,11 +192,13 @@ body{
         flex-wrap: wrap;
         padding-left: 24px;
         padding-top: 24px;
-        height: 160px;
+        height: auto;
     }
 
-    .abled{
-        height: 337px;
+    .brands--hidden{
+        transition: 1s ease-in;
+        height: 160px;
+        
     }
 
     .disabled{
@@ -219,39 +229,41 @@ body{
     }
 
 
-    .rotate-show::before{
+    .show-all__text::before{
         content: '';
         background-image: url(icons/icon.svg);
         position: relative;
         display: flex;
         left: -15px;
-        top: 6px;
+        top: 17px;
         width: 8px;
         height: 11px;
         transform: rotate(0);
+        transition: 200ms ease-in;
     }
 
     .rotate-hide::before{
-        content: '';
+        /* content: '';
         background-image: url(icons/icon.svg);
         position: relative;
         display: flex;
         left: -15px;
-        top: 6px;
+        top: 17px;
         width: 8px;
-        height: 11px;
+        height: 11px; */
         transform: rotate(180deg);
+
     }
 
 
-    .show-all__text{
+    /* .show-all__text{
         display: none;
         position: absolute;
     }
 
     .show-all__text--active{
         display: flex;
-    }
+    } */
 }
 
 @media (min-width: 1120px) {
@@ -270,7 +282,4 @@ body{
         margin-right: 32px;
     }
 
-    .abled{
-        height: 250px;
-    }
 }

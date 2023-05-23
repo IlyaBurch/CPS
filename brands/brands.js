@@ -2,11 +2,7 @@ var swiper = new Swiper(".brands__list--swiper", {
     wrapperClass: 'swiper-wrapper',
     SlideClass: 'brand__swiper-slide',
     slidesPerView: 'auto',
-    loop:'true',
     breakpoints: {
-        320:{
-            enabled: true
-        },
         768:{
             enabled: false
         }
@@ -19,18 +15,21 @@ var swiper = new Swiper(".brands__list--swiper", {
     },
 });
 
-document.getElementById('show').onclick = function() {
-    document.getElementById('show').classList.toggle('show-all__text--active');
-    document.getElementById('show').classList.toggle('rotate-show');
-    document.getElementById('hide').classList.toggle('show-all__text--active');
-    document.getElementById('hide').classList.toggle('rotate-hide');
-    document.getElementById('list').classList.toggle('abled')
-  }
+const showAll = document.querySelector('.show-all');
+const showAllList = document.querySelector(".brands__list");
+const showAllText = document.querySelector(".show-all__text");
 
-  document.getElementById('hide').onclick = function() {
-    document.getElementById('hide').classList.toggle('show-all__text--active');
-    document.getElementById('hide').classList.toggle('rotate-hide');
-    document.getElementById('show').classList.toggle('show-all__text--active');
-    document.getElementById('show').classList.toggle('rotate-show');
-    document.getElementById('list').classList.toggle('abled')
-  }
+
+
+function showAllButton(){
+    showAllList.classList.toggle('brands--hidden');
+    showAllText.classList.toggle('rotate-hide')
+    let showAllContent = showAllText.textContent;
+    if (showAllContent == 'Показать все') {
+        showAllText.textContent = 'Скрыть';
+        return;
+    }
+    showAllText.textContent = 'Показать все';
+}
+
+showAll.addEventListener('click', showAllButton, false);
