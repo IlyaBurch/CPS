@@ -51,7 +51,6 @@ body{
     min-height: 0;
     position: relative;
     padding-left: 16px;
-    transition:300ms ease-in;
 }
 
 .brands__list--swiper::after{
@@ -193,6 +192,7 @@ body{
         padding-left: 24px;
         padding-top: 24px;
         height: auto;
+        transition: height 300ms ease-in;
     }
 
     .brands--hidden{
